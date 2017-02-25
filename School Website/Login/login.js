@@ -2,10 +2,11 @@
     var email = document.getElementById('txtEmail');
     var password = document.getElementById('txtPassword');
     var msg = document.getElementById('lblMsg');
-    var savedEmail = "baburajnish@gmail.com";
-    var savedPassword = "raj1234";
-
-    if (email.value == savedEmail && password.value == savedPassword) {
+    var student = {
+        email: "baburajnish@gmail.com",
+        password: "raj1234"
+    };
+    if (email.value == student.email && password.value == student.password) {
         msg.innerHTML = "You successfull logged in";
 
     }
@@ -16,3 +17,4 @@
         msg.innerHTML = "Please Enter your Username or Password.";
     }
 }
+
