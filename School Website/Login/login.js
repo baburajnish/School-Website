@@ -1,13 +1,4 @@
-﻿function Student(email,password) {
-    this.email = email;
-    this.password = password;
-
-}
-
-
-
-
-function login() {
+﻿function login() {
     var email = document.getElementById('txtEmail');
     var password = document.getElementById('txtPassword');
     var msg = document.getElementById('lblMsg');

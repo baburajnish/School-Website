@@ -1,7 +1,9 @@
 ﻿window.onload= function(){
     edit()
 };
+
 function edit() {
+   
     var useName=document.getElementById('lblName');
     useName.innerHTML="Rajnish Tiwari";
     var email = document.getElementById('lblEmail');
