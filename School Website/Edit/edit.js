@@ -1,4 +1,4 @@
-﻿function edit() {
+﻿function displayStudent() {
     var userName = document.getElementById('txtName');
     userName.value="Rajnish Tiwari";
     var email = document.getElementById('txtEmail');
