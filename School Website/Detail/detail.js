@@ -4,8 +4,8 @@
 
 function edit() {
    
-    var useName=document.getElementById('lblName');
-    useName.innerHTML="Rajnish Tiwari";
+    var userName=document.getElementById('lblName');
+    userName.innerHTML="Rajnish Tiwari";
     var email = document.getElementById('lblEmail');
     email.innerHTML = "baburajnish@gmail.com";
     var password = document.getElementById('lblPassword');

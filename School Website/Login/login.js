@@ -2,7 +2,7 @@
     var email = document.getElementById('txtEmail');
     var password = document.getElementById('txtPassword');
     var msg = document.getElementById('lblMsg');
-    var student = new Student("baburajnish@gmail.com", "raj1234");
+    var student = getStudentByEmailId(email.value);
     if (email.value == student.email && password.value == student.password) {
         msg.innerHTML = "You successfull logged in";
 
@@ -14,4 +14,8 @@
         msg.innerHTML = "Please Enter your Username or Password.";
     }
 }
+function getStudentByEmailId(email) {
+    var student = new Student("baburajnish@gmail.com", "raj1234");
+    return student;
 
+}

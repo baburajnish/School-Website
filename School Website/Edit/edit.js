@@ -14,5 +14,6 @@
     var qualifiction = document.getElementById('graduation');
     qualifiction.checked = true;
     var address = document.getElementById('txtAddress');
-    address.value= "AT/PO-Brarajnagar(Odisha)"
+    address.value = "AT/PO-Brarajnagar(Odisha)"
+    var student=new Student()
 }
