@@ -1,11 +1,17 @@
-﻿function login() {
+﻿function Student(email,password) {
+    this.email = email;
+    this.password = password;
+
+}
+
+
+
+
+function login() {
     var email = document.getElementById('txtEmail');
     var password = document.getElementById('txtPassword');
     var msg = document.getElementById('lblMsg');
-    var student = {
-        email: "baburajnish@gmail.com",
-        password: "raj1234"
-    };
+    var student = new Student("baburajnish@gmail.com", "raj1234");
     if (email.value == student.email && password.value == student.password) {
         msg.innerHTML = "You successfull logged in";
 
