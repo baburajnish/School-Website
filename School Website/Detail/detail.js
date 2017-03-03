@@ -48,6 +48,7 @@ function DisplayStudent() {
     document.getElementById('lblAddress').innerHTML = student.address;
     document.getElementById('lblCountry').innerHTML = student.country;
 
+
 }
 
 
