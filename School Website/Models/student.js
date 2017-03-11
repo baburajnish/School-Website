@@ -1,4 +1,8 @@
-﻿function Student(email, password, userName, dob, mob, gender, qualifiction, address, country) {
+﻿
+
+
+
+function Student(email, password, userName, dob, mob, gender, qualifiction, address, country, id, role) {
     this.email = email;
     this.password = password;
     this.userName = userName;
@@ -7,5 +11,7 @@
     this.gender = gender;
     this.qualifiction = qualifiction;
     this.address = address;
-    this.country = country
+    this.country = country;
+    this.id = id;
+    this.role = role;
 }

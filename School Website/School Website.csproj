@@ -57,6 +57,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assign Role\assign-role.html" />
+    <Content Include="Assign Role\assignRole.js" />
+    <Content Include="bootstrp pract\bootstrp.html" />
+    <Content Include="bootstrp pract\StyleSheet1.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -65,17 +69,22 @@
     <Content Include="Detail\detail.js" />
     <Content Include="Edit\edit-view.html" />
     <Content Include="Edit\edit.js" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Edit\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Edit\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Edit\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Edit\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Edit\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Search User\Search-User.html" />
+    <Content Include="Search User\SearchUser.js" />
+    <Content Include="Student List\StudentList.js" />
+    <Content Include="Student List\Student-List.html" />
     <Content Include="Models\student.js" />
+    <Content Include="Models\user.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
