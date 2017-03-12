@@ -1,4 +1,6 @@
-﻿
+﻿/// <reference path="C:\Users\babur\onedrive\documents\visual studio 2013\Projects\School Website\School Website\Assign Role/assign-role.html" />
+/// <reference path="C:\Users\babur\onedrive\documents\visual studio 2013\Projects\School Website\School Website\Assign Role/assign-role.html" />
+
 function getUsers() {
     var user = [
         (new User("01", "r", "Student")),
@@ -20,14 +22,44 @@ function displayedUser() {
         var Id = $("<div>");
         var Name = $("<div>");
         var Role = $("<div>");
+        
+        
+        btnAssignRole = $('<input />', {
+            class: 'btn btn-info',
+            type: 'button',
+            value: 'Assign Role',
+            id: 'btn_a',
+            on: {
+                click: function () {
+                    window.location.href = "../Assign Role/assign-role.html";
+                }
+            }
+        });
+        btnEdit = $('<input/>', {
+            class: 'btn btn-info',
+            type: 'button',
+            value: 'Edit',
+            id: 'btn_b',
+            on: {
+                click: function () {
+                    window.location.href = "../Edit/edit-view.html";
+                }
+            }
+
+        });
+
+
+
         if (userName == user[i].Name) {
-            Id.html("User Id :" + user[i].Id);
-            Name.html(" User Name :" + user[i].Name);
-            Role.html("User Role :" + user[i].Role);
+            Id.html("<label> Id</label> :"+" " + "<label>" + user[i].Id + "</label>");
+            Name.html("<label> Name :</label>" + " " + "<label>" + user[i].Name +"</label>");
+            Role.html("<label> Role :</label>" + " " + "<label>" + user[i].Role + "</label>");
 
             container.append(Id);
             container.append(Name);
             container.append(Role);
+            container.append(btnAssignRole);
+            container.append(btnEdit);
             break;
         }
     }
