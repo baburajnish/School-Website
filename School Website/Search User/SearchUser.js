@@ -22,7 +22,7 @@ function displayedUser() {
         var Id = $("<div>");
         var Name = $("<div>");
         var Role = $("<div>");
-        
+        var btnDiv = $("<div>", {class:"btn-group"});
         
         btnAssignRole = $('<input />', {
             class: 'btn btn-info',
@@ -58,8 +58,9 @@ function displayedUser() {
             container.append(Id);
             container.append(Name);
             container.append(Role);
-            container.append(btnAssignRole);
-            container.append(btnEdit);
+            btnDiv.append(btnAssignRole);
+            btnDiv.append(btnEdit);
+            container.append(btnDiv);
             break;
         }
     }
