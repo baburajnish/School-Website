@@ -22,7 +22,7 @@ function displayedUser() {
         var Id = $("<div>");
         var Name = $("<div>");
         var Role = $("<div>");
-        var btnDiv = $("<div>", {class:"btn-group"});
+        var btnDiv = $("<div>", {class:"btn-group-vertical"});
         
         btnAssignRole = $('<input />', {
             class: 'btn btn-info',
@@ -40,9 +40,11 @@ function displayedUser() {
             type: 'button',
             value: 'Edit',
             id: 'btn_b',
+
             on: {
                 click: function () {
-                    window.location.href = "../Edit/edit-view.html";
+                    var userId = user[i].Id;
+                    window.location.href = "../Edit/edit-view.html?userId="+userId;
                 }
             }
 
