@@ -1,6 +1,8 @@
 ﻿
 window.onload = function () {
 
+    
+
     var fetchedUrl = window.location.href;
     var splitUrl = fetchedUrl.split('=');
     var fetchedId = splitUrl[1];
@@ -15,6 +17,8 @@ window.onload = function () {
     document.getElementById('radioMale').checked = user.Gender;
     document.getElementById('graduation').checked = user.Qualifiction;
     document.getElementById('txtAddress').value = user.Address;
+    
+    $('option[value='+user.Country+']').attr("selected", "selected");
 };
 
 
@@ -64,7 +68,7 @@ function DisplayStudent() {
     document.getElementById('radioMale').checked = student.Gender;
     document.getElementById('graduation').checked = student.Qualifiction;
     document.getElementById('txtAddress').value = student.Address;
-    
+    $('#ddlCountry').val(student.Address);
 
 }
 
