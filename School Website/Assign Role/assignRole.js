@@ -1,25 +1,42 @@
-﻿
-$(document).ready(function () {
+﻿$(document).ready(function () {
 
-    displayedUser();
+    
+    var fetchedUrl = window.location.href;
+    var splitUrl = fetchedUrl.split('=');
+    var fetchedId = splitUrl[1];
+    var repo = new Repository();
+    var user = repo.getUserById(fetchedId);
 
-
-});
-
-function getSelectedUser() {
-    var user=new User("1","Rajnish Tiwar",true);
-    return user;
-}
-function displayedUser() {
-    var user = getSelectedUser();
     $('#lblId').html(user.Id);
     $('#lblName').html(user.Name);
-    $('#chkStudent').prop("checked", user.Role);
-    var cantiner = $('#canteiner');
-    var lblName = $("<label>");
-  
 
-}
+    if ($('#chkStudent').val() == user.Role) {
+        $('#chkStudent').prop("checked", true);
+    }
+    if ($('#chkAdmin').val() == user.Role) {
+        $('#chkAdmin').prop("checked", true);
+    }
+    if ($('#chkPrinciple').val() == user.Role) {
+        $('#chkPrinciple').prop("checked", true);
+    }
+    if ($('#chkFaculty').val() == user.Role) {
+        $('#chkFaculty').prop("checked", true);
+    }
+   
+ 
+});
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

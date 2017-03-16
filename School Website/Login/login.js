@@ -3,7 +3,7 @@
     var password = document.getElementById('txtPassword');
     var msg = document.getElementById('lblMsg');
     var student = getStudentByEmailId(email.value);
-    if (email.value == student.email && password.value == student.password) {
+    if (email.value == student.Email && password.value == student.Password) {
         msg.innerHTML = "You successfull logged in";
 
     }

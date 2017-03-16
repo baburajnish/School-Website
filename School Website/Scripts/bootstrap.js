@@ -1290,7 +1290,7 @@ if (typeof jQuery === 'undefined') {
     animation: true,
     placement: 'top',
     selector: false,
-    template: '<div class="tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>',
+    template: '<div class="tooltip" Role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>',
     trigger: 'hover focus',
     title: '',
     delay: 0,
@@ -1441,7 +1441,7 @@ if (typeof jQuery === 'undefined') {
       var tipId = this.getUID(this.type)
 
       this.setContent()
-      $tip.attr('id', tipId)
+      $tip.attr('Id', tipId)
       this.$element.attr('aria-describedby', tipId)
 
       if (this.options.animation) $tip.addClass('fade')
@@ -1802,7 +1802,7 @@ if (typeof jQuery === 'undefined') {
     placement: 'right',
     trigger: 'click',
     content: '',
-    template: '<div class="popover" role="tooltip"><div class="arrow"></div><h3 class="popover-title"></h3><div class="popover-content"></div></div>'
+    template: '<div class="popover" Role="tooltip"><div class="arrow"></div><h3 class="popover-title"></h3><div class="popover-content"></div></div>'
   })
 
 

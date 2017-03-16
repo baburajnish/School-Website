@@ -69,11 +69,6 @@
     <Content Include="Detail\detail.js" />
     <Content Include="Edit\edit-view.html" />
     <Content Include="Edit\edit.js" />
-    <Content Include="Edit\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Edit\fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="Edit\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="Edit\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="Edit\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Models\repository.js" />
     <Content Include="packages.config" />

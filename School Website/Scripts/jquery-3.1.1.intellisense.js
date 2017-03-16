@@ -1522,10 +1522,10 @@ intellisense.annotate(jQuery.fn, {
     ///   <returns type="jQuery" />
     /// </signature>
   },
-  'id': function() {
+  "Id": function() {
     /// <signature>
-    ///   <summary>Selects a single element with the given id attribute.</summary>
-    ///   <param name="id" type="String">An ID to search for, specified via the id attribute of an element.</param>
+    ///   <summary>Selects a single element with the given Id attribute.</summary>
+    ///   <param name="Id" type="String">An ID to search for, specified via the Id attribute of an element.</param>
     /// </signature>
   },
   'image': function() {
@@ -2040,8 +2040,8 @@ intellisense.annotate(jQuery.fn, {
     ///   <returns type="jQuery" />
     /// </signature>
   },
-  'password': function() {
-    /// <summary>Selects all elements of type password.</summary>
+  "Password": function() {
+    /// <summary>Selects all elements of type Password.</summary>
   },
   'position': function() {
     /// <summary>Get the current coordinates of the first element in the set of matched elements, relative to the offset parent.</summary>

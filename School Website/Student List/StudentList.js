@@ -37,15 +37,15 @@ function displayRegistaredStudent() {
         btn.type = "button";
         btn.value = "Edit";
         var hr = document.createElement('hr');
-        divEmail.innerHTML = "<label>Email :</label>" + " " + "<label>" + student[i].email + "</label>";
-        divPassword.innerHTML = "<label>Password:</label>" + " " + "<label>" + student[i].password + "</label>";
-        divName.innerHTML = "<label>Name :</label>" + " " + "<label>" + student[i].userName + "</label>";
-        divDob.innerHTML = "<label>DOB :</label>" + " " + "<label>" + student[i].dob + "</label>";
-        divMob.innerHTML = "<label>MOB :</label>" + " " + "<label>" + student[i].mob + "</label>";
-        divMale.innerHTML = "<label>Gender :</label>" + " " + "<label>" + student[i].gender + "</label>";
-        divGraduate.innerHTML = "<label>Qualifiction :</label>" + " " + "<label>" + student[i].qualifiction + "</label>";
-        divAddress.innerHTML = "<label>Address :</label>" + " " + "<label>" + student[i].address + "</label>";
-        divCountry.innerHTML = "<label>Country :</label>" + " " + "<label>" + student[i].country + "</label>";
+        divEmail.innerHTML = "<label>Email :</label>" + " " + "<label>" + student[i].Email + "</label>";
+        divPassword.innerHTML = "<label>Password:</label>" + " " + "<label>" + student[i].Password + "</label>";
+        divName.innerHTML = "<label>Name :</label>" + " " + "<label>" + student[i].Name + "</label>";
+        divDob.innerHTML = "<label>DOB :</label>" + " " + "<label>" + student[i].Dob + "</label>";
+        divMob.innerHTML = "<label>MOB :</label>" + " " + "<label>" + student[i].Mob + "</label>";
+        divMale.innerHTML = "<label>Gender :</label>" + " " + "<label>" + student[i].Gender + "</label>";
+        divGraduate.innerHTML = "<label>Qualifiction :</label>" + " " + "<label>" + student[i].Qualifiction + "</label>";
+        divAddress.innerHTML = "<label>Address :</label>" + " " + "<label>" + student[i].Address + "</label>";
+        divCountry.innerHTML = "<label>Country :</label>" + " " + "<label>" + student[i].Country + "</label>";
 
         content.appendChild(divEmail);
         content.appendChild(divPassword);

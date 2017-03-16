@@ -14,16 +14,16 @@ function getSelectedStudent() {
 
 }
 function DisplayStudent() {
-    var student = getSelectedStudent()
-    document.getElementById('lblEmail').innerHTML = student.email;
-    document.getElementById('lblPassword').innerHTML = student.password;
-    document.getElementById('lblName').innerHTML = student.userName;
-    document.getElementById('lblDob').innerHTML = student.dob;
-    document.getElementById('lblMob').innerHTML = student.mob;
-    document.getElementById('lblMale').innerHTML = student.gender;
-    document.getElementById('lblGraduate').innerHTML = student.qualifiction;
-    document.getElementById('lblAddress').innerHTML = student.address;
-    document.getElementById('lblCountry').innerHTML = student.country;
+    var student = getSelectedStudent();
+    document.getElementById('lblEmail').innerHTML = student.Email;
+    document.getElementById('lblPassword').innerHTML = student.Password;
+    document.getElementById('lblName').innerHTML = student.Name;
+    document.getElementById('lblDob').innerHTML = student.Dob;
+    document.getElementById('lblMob').innerHTML = student.Mob;
+    document.getElementById('lblMale').innerHTML = student.Gender;
+    document.getElementById('lblGraduate').innerHTML = student.Qualifiction;
+    document.getElementById('lblAddress').innerHTML = student.Address;
+    document.getElementById('lblCountry').innerHTML = student.Country;
    
 
 

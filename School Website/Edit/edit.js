@@ -1,11 +1,20 @@
 ﻿
 window.onload = function () {
 
-
+    var fetchedUrl = window.location.href;
+    var splitUrl = fetchedUrl.split('=');
+    var fetchedId = splitUrl[1];
     var repo = new Repository();
-  var user =  repo.getUserById("02");
+    var user = repo.getUserById(fetchedId);
 
-
+    document.getElementById('txtEmail').value = user.Email;
+    document.getElementById('txtPassword').value = user.Password;
+    document.getElementById('txtName').value = user.Name;
+    document.getElementById('txtDob').value = user.Dob;
+    document.getElementById('txtMob').value = user.Mob;
+    document.getElementById('radioMale').checked = user.Gender;
+    document.getElementById('graduation').checked = user.Qualifiction;
+    document.getElementById('txtAddress').value = user.Address;
 };
 
 
@@ -15,14 +24,14 @@ window.onload = function () {
 
 function updeteSelectedStudent() {
     var student = getSelectedStudent();
-    student.email = document.getElementById('txtEmail').value;
-    student.password = document.getElementById('txtPassword').value;
-    student.userName = document.getElementById('txtName').value;
-    student.dob = document.getElementById('txtDob').value;
-    student.mob = document.getElementById('txtMob').value;
-    student.gender = document.getElementById('radioMale').checked;
-    student.qualifiction = document.getElementById('graduation').checked;
-    student.address = document.getElementById('txtAddress').value;
+    student.Email = document.getElementById('txtEmail').value;
+    student.Password = document.getElementById('txtPassword').value;
+    student.Name = document.getElementById('txtName').value;
+    student.Dob = document.getElementById('txtDob').value;
+    student.Mob = document.getElementById('txtMob').value;
+    student.Gender = document.getElementById('radioMale').checked;
+    student.Qualifiction = document.getElementById('graduation').checked;
+    student.Address = document.getElementById('txtAddress').value;
     clear();
 }
 function clear() {
@@ -46,15 +55,15 @@ function getSelectedStudent() {
 
 }
 function DisplayStudent() {
-    var student = getSelectedStudent()
-    document.getElementById('txtEmail').value = student.email;
-    document.getElementById('txtPassword').value = student.password;
-    document.getElementById('txtName').value = student.userName;
-    document.getElementById('txtDob').value = student.dob;
-    document.getElementById('txtMob').value = student.mob;
-    document.getElementById('radioMale').checked = student.gender;
-    document.getElementById('graduation').checked = student.qualifiction;
-    document.getElementById('txtAddress').value = student.address;
+    var student = getSelectedStudent();
+    document.getElementById('txtEmail').value = student.Email;
+    document.getElementById('txtPassword').value = student.Password;
+    document.getElementById('txtName').value = student.Name;
+    document.getElementById('txtDob').value = student.Dob;
+    document.getElementById('txtMob').value = student.Mob;
+    document.getElementById('radioMale').checked = student.Gender;
+    document.getElementById('graduation').checked = student.Qualifiction;
+    document.getElementById('txtAddress').value = student.Address;
     
 
 }
