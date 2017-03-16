@@ -1,4 +1,19 @@
-﻿function updeteSelectedStudent() {
+﻿
+window.onload = function () {
+
+
+    var repo = new Repository();
+  var user =  repo.getUserById("02");
+
+
+};
+
+
+
+
+
+
+function updeteSelectedStudent() {
     var student = getSelectedStudent();
     student.email = document.getElementById('txtEmail').value;
     student.password = document.getElementById('txtPassword').value;
