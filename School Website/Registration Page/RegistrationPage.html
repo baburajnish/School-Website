@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Registration Page</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="wIdth=device-wIdth, initial-scale=1">
+    <script src="../Scripts/jquery-3.1.1.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="registrationpage.js"></script>
+
+</head>
+    <body>
+        
+       <div class="container">
+            <div class="form-group">
+                <label class="control-label">Name:</label>
+                <input type="text" id="txtName" class="form-control" placeholder="Enter Name" />
+                <label id="lblName" style="color:Red"></label>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Email:</label>
+                <input type="text" id="txtEmail" class="form-control" placeholder="Enter Email" />
+                <label id="lblEmail" style="color:Red" class="control-label"></label>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Password:</label>
+                <input type="password" id="txtPassword" class="form-control" placeholder="Enter Password" />
+                <label id="lblPassword" style="color:Red" class="control-label"></label>
+            </div>
+            <div class="form-group">
+                <label class="control-label">DOB:</label>
+                <input type="date" id="txtDob" class="form-control" placeholder="Enter DOB" />
+                <label id="lblDOB" style="color:Red" class="control-label"></label>
+            </div>
+            <div class="form-group">
+                <label class="control-label">MOB:</label>
+                <input type="text" id="txtMob" class="form-control" placeholder="Enter MOB" />
+                <label id="lblMOB" style="color:Red" class="control-label"></label>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Gender:</label>
+                <label class="radio-inline"><input type="radio" id="radioMale" name="Gender" />Male</label>
+                <label class="radio-inline"><input type="radio" id="radioFemale" name="Gender" />Female</label>
+                <label id="lbsmender" style="color:Red" class="control-label"></label>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Qualifiction:</label>
+                <label class="checkbox-inline"><input type="checkbox" id="10th" />10th</label>
+                <label class="checkbox-inline"><input type="checkbox" id="12th" />12th</label>
+                <label class="checkbox-inline"><input type="checkbox" id="graduation" />Graduation</label>
+                <label id="lblQualifiction" style="color:Red" class="control-label"></label>
+
+            </div>
+            <div class="form-group">
+                <label class="control-label">Country:</label>
+                <select class="form-control" id="ddlCountry">
+                    <option value="0">Select Country</option>
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                    <option value="UK">UK</option>
+                </select>
+                <label id="lblCountry" style="color:Red" class="control-label"></label>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Address:</label>
+                <textarea id="txtAddress" class="form-control"></textarea>
+                <label id="lblAddress" style="color:Red" class="control-label"></label>
+            </div><br />
+            <button onclick="saveUser()" class="btn btn-info btn-block">Submit</button>
+        </div>
+      
+
+    </body>
+</html>
+
