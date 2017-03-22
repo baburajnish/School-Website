@@ -1,8 +1,5 @@
 ﻿
 window.onload = function () {
-
-    
-
     var fetchedUrl = window.location.href;
     var splitUrl = fetchedUrl.split('=');
     var fetchedId = splitUrl[1];
@@ -53,7 +50,7 @@ function clear() {
 }
 
 function getSelectedStudent() {
-    var student = new Student("baburajnish@gmail.com", "raj1234", "Rajnish Tiwari",
+    var student = new User("baburajnish@gmail.com", "raj1234", "Rajnish Tiwari",
         "22-08-1988", "7205332706", "true", "true", "AT/PO-Brarajnagar(Odisha)");
     return student;
 

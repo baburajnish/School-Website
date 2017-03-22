@@ -1,28 +1,30 @@
 ﻿/// <reference path="C:\Users\babur\onedrive\documents\visual studio 2013\Projects\School Website\School Website\Assign Role/assign-Role.html" />
 /// <reference path="C:\Users\babur\onedrive\documents\visual studio 2013\Projects\School Website\School Website\Assign Role/assign-Role.html" />
 
-function getUsers() {
-    var user = [
-        (new User("01", "r", "Student")),
-       (new User("02", "Rakesh Tiwari", "Student")),
-       (new User("03", "Rahul Varma", "Student")),
-       (new User("04", "Ashok Sahu", "Student")),
-       (new User("05", "Ravi Sarma", "Admin")),
-       (new User("06", "Amar Barla", "Principle")),
-       (new User("07", "Asish Sony", "Faculty"))
-    ];
-    return user;
-}
+//function getUsers() {
+//    var user = [
+//        (new User("01", "r", "User")),
+//       (new User("02", "Rakesh Tiwari", "User")),
+//       (new User("03", "Rahul Varma", "User")),
+//       (new User("04", "Ashok Sahu", "User")),
+//       (new User("05", "Ravi Sarma", "Admin")),
+//       (new User("06", "Amar Barla", "Principle")),
+//       (new User("07", "Asish Sony", "Faculty"))
+//    ];
+//    return user;
+//}
 function displayedUser() {
-    var user = getUsers();
+    var repository = new window.Repository();
+    var user = repository.getRegistaredStudent();
     var userName = $("#txtName").val();
     var container = $("#container");
     container.html("");
     for (var i = 0; i < user.length; i++) {
-        var id = $("<div>");
-        var name = $("<div>");
-        var role = $("<div>");
-        var btnDiv = $("<div>", {"class":"btn-group-vertical"});
+        var id = $("<div class='col-sm-2'>");
+        var name = $("<div class='col-sm-4'>");
+        var role = $("<div class='col-sm-2'>");
+        var action = $("<div class='col-sm-4'>");
+        var btnDiv = $("<div>", { "class": "btn-group" });
         
         var btnAssignRole = $('<input />', {
             "class": 'btn btn-info',
@@ -54,16 +56,19 @@ function displayedUser() {
 
 
         if (userName == user[i].Name) {
-            id.html("<label> Id</label> :"+" " + "<label>" + user[i].Id + "</label>");
-            name.html("<label> Name :</label>" + " " + "<label>" + user[i].Name +"</label>");
-            role.html("<label> Role :</label>" + " " + "<label>" + user[i].Role + "</label>");
+            id.html("<label class='control-label'> Id</label> " + "<div clas='col-sm-2'><label class='control-label'>" + user[i].Id + "</label></div>");
+            name.html("<label class='control-label'> Name </label> " + "<div clas='col-sm-4'><label class='control-label'>" + user[i].Name + "</label></div>");
+            role.html("<label class='control-label'> Role </label>" + "<div clas='col-sm-2'><label class='control-label'>" + user[i].Role + "</label></div>");
+            action.html("<label class='control-label'> Action </label>");
 
             container.append(id);
             container.append(name);
             container.append(role);
             btnDiv.append(btnAssignRole);
             btnDiv.append(btnEdit);
+            container.append(action);
             container.append(btnDiv);
+           
      
                    
 

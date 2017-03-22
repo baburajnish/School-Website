@@ -1,21 +1,39 @@
-﻿function login() {
-    var email = document.getElementById('txtEmail');
-    var password = document.getElementById('txtPassword');
-    var msg = document.getElementById('lblMsg');
-    var student = getStudentByEmailId(email.value);
-    if (email.value == student.Email && password.value == student.Password) {
-        msg.innerHTML = "You successfull logged in";
+﻿/// <reference path="C:\Users\babur\Desktop\School Website\School Website\Registration Page/RegistrationPage.html" />
+$(document).ready(function() {
+    $("#msgDiv").hide();
+});
 
+function login() {
+    var email = $('#txtEmail');
+    var password =$('#txtPassword');
+  
+    var repository = new Repository();
+    var users = repository.getRegistaredStudent();
+
+    for (var i = 0; i < users.length; i++) {
+
+        if (email.val() == "" && password.val() == "") {
+
+            $("#msgDiv").html("Please Enter  Username and Password.").show();
+            return;
+        }
+        if (email.val() == users[i].Email && password.val() == users[i].Password) {
+
+            $("#msgDiv").html("You are successfully logged in!").show();
+            email.val("");
+            password.val("");
+
+            return;
+        } else {
+            $("#msgDiv").html("Please enter valid email id or password.").show();
+            return;
+        }
+       
+       
     }
-    else {
-        msg.innerHTML = "Your Username or Password is incorrect.";
-    }
-    if (email.value == "" && password.value == "") {
-        msg.innerHTML = "Please Enter your Username or Password.";
-    }
+   
 }
-function getStudentByEmailId(email) {
-    var student = new Student("baburajnish@gmail.com", "raj1234");
-    return student;
 
+function goTo(parameters) {
+    window.location.href = "../Registration Page/RegistrationPage.html";
 }
