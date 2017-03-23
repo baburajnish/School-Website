@@ -1,5 +1,4 @@
 ﻿function Repository() {
-    var userStore = [];
     var lastId = 0;
     return {
         getUserById: function (userId) {
@@ -40,10 +39,10 @@
             if (!userToSave.Id) {
                 userToSave.Id = lastId++;
             }
-            userStore[userToSave.Id] = userToSave;
+            window.localStorage.setItem(userToSave.Id, JSON.stringify(userToSave));
         },
         getUserFromStore:function(id) {
-            return userStore[id];
+            return window.localStorage.userStore[id];
         }
 
     }

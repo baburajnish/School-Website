@@ -8,7 +8,7 @@
     });
 
     $("#txtDob").datepicker();
-    $("input").checkboxradio();
+    
 
     $("#txtName").blur(function () {
         if ($(this).val() == "") {
@@ -17,11 +17,59 @@
             $("#lblName").html("");
         }
     });
+  
 });
 
-function saveUser() {
+function registerUser() {
     validateUser();
+    setObjectFromUI();
 }
+
+
+function setObjectFromUI() {
+    var user = new User();
+    var repository = new Repository();
+    var checkedQualification="";
+    var checkedRole="";
+
+    user.Name = $("#txtName").val();
+    user.Email = $("#txtEmail").val();
+    user.Password = $("#txtPassword").val();
+    user.Dob = $("#txtDob").val();
+    user.Mob = $("#txtMob").val();
+    user.Gender = $("input[type='radio']:checked").val();
+
+    if ($('#10th').is(':checked') == true) {
+        checkedQualification += $('#10th').val()+",";
+    }
+    if ($('#12th').is(':checked') == true) {
+        checkedQualification += $('#12th').val() + ",";
+    }
+    if ($('#graduation').is(':checked') == true) {
+        checkedQualification += $('#graduation').val() + ",";
+    }
+    user.Qualifiction = checkedQualification;
+
+    if ($("#Admin").is(':checked') == true) {
+        checkedRole += $("#Admin").val() + ", ";
+    }
+    if ($("#Student").is(':checked') == true) {
+        checkedRole += $("#Student").val() + ", ";
+    }
+    if ($("#Principle").is(':checked') == true) {
+        checkedRole += $("#Principle").val() + ", ";
+    }
+    if ($("#Faculty").is(':checked') == true) {
+        checkedRole += $("#Faculty").val() + ", ";
+    }
+    
+    user.Role = checkedRole;
+
+    user.Country = $("#ddlCountry :selected").text();
+    user.Address = $("#txtAddress").val();
+    repository.saveUser(user);
+}
+
 
 function validateUser() {
 
@@ -86,7 +134,11 @@ function validateUser() {
     } else {
         $("#lblQualifiction").html("");
     }
-
+    if ($('#Admin').is(':checked') == false && $('#Student').is(':checked') == false && $('#Principle').is(':checked') == false && $('#Faculty').is(':checked') == false) {
+        $("#lblRole").html('Please choose atleast one option.');
+    } else {
+        $("#lblRole").html("");
+    }
 
     if (country.val() == "0") {
         $("#lblCountry").html('Please choose Your Country.');

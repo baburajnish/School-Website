@@ -112,6 +112,7 @@
     <Content Include="Edit\edit.js" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="HtmlPage1.html" />
+    <Content Include="Login\user-exception.js" />
     <Content Include="Models\repository.js" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

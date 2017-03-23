@@ -9,6 +9,9 @@
     <script src="../Scripts/jquery-ui-1.12.1.min.js"></script>
     <script src="../Scripts/bootstrap.min.js"></script>
     <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+
+    <script src="../Models/user.js"></script>
+    <script src="../Models/repository.js"></script>
     <script src="registrationpage.js"></script>
     <style>
         header {
@@ -86,23 +89,32 @@
             </div>
             <div class="form-group">
                 <label class="control-label">Gender:</label>
-                <label class="radio-inline"><input type="radio" id="radioMale" name="Gender" />Male</label>
-                <label class="radio-inline"><input type="radio" id="radioFemale" name="Gender" />Female</label>
+                <label class="radio-inline"><input type="radio" id="radioMale" name="Gender" value="Male"/>Male</label>
+                <label class="radio-inline"><input type="radio" id="radioFemale" name="Gender"  value="Female" />Female</label>
                 <label id="lblGender" style="color:Red" class="control-label"></label>
             </div>
             <div class="form-group">
                 <label class="control-label">Qualifiction:</label>
-                <label class="checkbox-inline"><input type="checkbox" id="10th" />10th</label>
-                <label class="checkbox-inline"><input type="checkbox" id="12th" />12th</label>
-                <label class="checkbox-inline"><input type="checkbox" id="graduation" />Graduation</label>
+                <label class="checkbox-inline"><input type="checkbox" id="10th" value="10th"/>10th</label>
+                <label class="checkbox-inline"><input type="checkbox" id="12th" value="12th"/>12th</label>
+                <label class="checkbox-inline"><input type="checkbox" id="graduation" value="Graduation"/>Graduation</label>
                 <label id="lblQualifiction" style="color:Red" class="control-label"></label>
+
+            </div>
+            <div class="form-group">
+                <label class="control-label">Role:</label>
+                <label class="checkbox-inline"><input type="checkbox" id="Admin" value="Admin" />Admin</label>
+                <label class="checkbox-inline"><input type="checkbox" id="Student" value="Student" />Student</label>
+                <label class="checkbox-inline"><input type="checkbox" id="Principle" value="Principle" />Principle</label>
+                <label class="checkbox-inline"><input type="checkbox" id="Faculty" value="Faculty" />Faculty</label>
+                <label id="lblRole" style="color:Red" class="control-label"></label>
 
             </div>
             <div class="form-group">
                 <label class="control-label">Country:</label>
                 <select class="form-control" id="ddlCountry">
                     <option value="0">Select Country</option>
-                    <option value="India">India</option>
+                    <option value="India" >India</option>
                     <option value="USA">USA</option>
                     <option value="UK">UK</option>
                 </select>
@@ -113,7 +125,7 @@
                 <textarea id="txtAddress" class="form-control"></textarea>
                 <label id="lblAddress" style="color:Red" class="control-label"></label>
             </div><br />
-            <button onclick="saveUser()" class="btn btn-info btn-block">Submit</button>
+            <button onclick="registerUser()" class="btn btn-info btn-block">Submit</button>
         </div>
       
         <footer class="container-fluid text-center">
