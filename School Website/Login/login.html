@@ -12,10 +12,19 @@
     <script src="../Scripts/jquery-ui-1.12.1.min.js"></script>
     <script src="../Scripts/bootstrap.min.js"></script>
     
-    <script src="user-exception.js"></script>
-    <script src="../Models/repository.js"></script>
-    <script src="../Models/user.js"></script>
-    <script src="login.js"></script>
+   
+    
+   
+    <script src="login.controller.js"></script>
+    <script src="login.exception.js"></script>
+    <script src="login.service.js"></script>
+    <script src="login.storage.js"></script>
+    <script src="login.user.js"></script>
+
+
+    
+
+  
     <style>
         header {
             padding: 1em;
@@ -78,7 +87,7 @@
 
         </div><br />
         <div>
-            <input type="button" value="Login" onclick="login()" class="btn btn-primary" />
+            <input type="button" value="Login" id="btnLogin" class="btn btn-primary" />
             <input type="button" value="Create Account" onclick="goTo()" class="btn btn-primary" />
         </div>
 

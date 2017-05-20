@@ -112,7 +112,11 @@
     <Content Include="Edit\edit.js" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="HtmlPage1.html" />
-    <Content Include="Login\user-exception.js" />
+    <Content Include="Login\login.controller.js" />
+    <Content Include="Login\login.exception.js" />
+    <Content Include="Login\login.service.js" />
+    <Content Include="Login\login.storage.js" />
+    <Content Include="Login\login.user.js" />
     <Content Include="Models\repository.js" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -124,6 +128,10 @@
     <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
+    <Content Include="Registration Page\registration-Controller.js" />
+    <Content Include="Registration Page\registration-service.js" />
+    <Content Include="Registration Page\registration-Sstorage.js" />
+    <Content Include="Registration Page\registration-User.js" />
     <Content Include="Registration Page\RegistrationPage.html" />
     <Content Include="Registration Page\registrationpage.js" />
     <Content Include="Scripts\bootstrap.js" />
